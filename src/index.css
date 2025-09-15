@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Design tokens */
+:root {
+  /* Brand */
+  --brand-primary: 36 122 228; /* #247AE4 */
+  --brand-primary-700: 25 97 182; /* hover */
+  --brand-accent: 0 195 156; /* teal accent */
+  --brand-dark: 20 24 32;    /* text */
+  --brand-muted: 100 116 139;
+
+  /* Surface */
+  --bg: 246 248 252;         /* page background */
+  --card: 255 255 255;
+  --border: 229 231 235;
+
+  /* Radii / shadows */
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(2, 8, 23, 0.08);
+}
+
+/* Dark mode */
+:root.dark {
+  --bg: 10 12 16;
+  --card: 17 20 26;
+  --border: 38 44 58;
+  --brand-dark: 226 232 240;
+  --brand-muted: 148 163 184;
+  --shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+/* Tailwind v4 @theme: expose tokens as named colors */
+@theme {
+  --color-brand-primary: rgb(var(--brand-primary));
+  --color-brand-primary-700: rgb(var(--brand-primary-700));
+  --color-brand-accent: rgb(var(--brand-accent));
+  --color-brand-dark: rgb(var(--brand-dark));
+  --color-brand-muted: rgb(var(--brand-muted));
+
+  --color-bg: rgb(var(--bg));
+  --color-card: rgb(var(--card));
+  --color-border: rgb(var(--border));
+
+  --radius-xl: var(--radius);
+}
+
+/* Utility helpers */
+.container {
+  @apply mx-auto max-w-7xl px-6;
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  @apply inline-flex items-center justify-center font-semibold rounded-xl px-5 py-3 transition;
+}
+
+.btn-primary {
+  background: rgb(var(--brand-primary));
+  color: white;
+}
+.btn-primary:hover { background: rgb(var(--brand-primary-700)); }
+
+.btn-ghost {
+  @apply border;
+  border-color: var(--color-border);
+  color: rgb(var(--brand-dark));
+}
+:root.dark .btn-ghost { color: rgb(var(--brand-dark)); border-color: var(--color-border); }
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-extrabold tracking-tight;
+  color: rgb(var(--brand-dark));
+}
+.section-subtitle {
+  @apply mt-3 text-lg md:text-xl;
+  color: rgb(var(--brand-muted));
+}
+
+/* Body base */
+body {
+  background: var(--color-bg);
+  color: rgb(var(--brand-dark));
+}
+
