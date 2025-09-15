@@ -1,0 +1,17 @@
+# Conventional Commit Template
+
+# <type>(<scope>): <subject>
+#
+# Types: feat, fix, docs, style, refactor, perf, test, build, chore, ci
+# Scope: optional module or area (e.g., navbar, auth)
+# Subject: imperative, lower-case, no trailing period
+#
+# Body: motivation and context. Wrap at 72 chars.
+#
+# BREAKING CHANGE: describe breaking change and migration path
+
+# Examples
+# feat(navbar): add active link styling
+# fix(button): correct ghost variant colors
+# docs(readme): add local dev instructions
+
