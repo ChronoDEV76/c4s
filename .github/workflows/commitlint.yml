@@ -1,0 +1,41 @@
+name: Commitlint
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  lint-commits-and-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile=false
+
+      - name: Lint commit messages in PR range
+        if: github.event_name == 'pull_request'
+        run: |
+          BASE_SHA=${{ github.event.pull_request.base.sha }}
+          HEAD_SHA=${{ github.event.pull_request.head.sha }}
+          pnpm exec commitlint --from=$BASE_SHA --to=$HEAD_SHA
+
+      - name: Lint PR title with commitlint rules
+        if: github.event_name == 'pull_request'
+        run: |
+          TITLE="${{ github.event.pull_request.title }}"
+          echo "$TITLE" | pnpm exec commitlint
+
