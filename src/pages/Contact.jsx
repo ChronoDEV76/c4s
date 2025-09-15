@@ -6,7 +6,7 @@ export default function Contact() {
 
   async function onSubmit(e) {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
+    new FormData(e.currentTarget);
     // TODO: Koppel aan je backend of Formspree/Netlify
     setStatus("Bedankt! We nemen snel contact op.");
     e.currentTarget.reset();
@@ -44,4 +44,3 @@ export default function Contact() {
     </div>
   );
 }
-

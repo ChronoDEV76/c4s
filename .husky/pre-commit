@@ -1,1 +1,2 @@
-pnpm test
+# Lint source files before committing
+pnpm lint
