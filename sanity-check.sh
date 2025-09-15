@@ -15,13 +15,16 @@ else
 fi
 
 # 2. Check vite.config.js for React plugin
-echo "👉 Checking vite.config.js for React plugin..."
-if grep -q "@vitejs/plugin-react" vite.config.js 2>/dev/null; then
-  echo "✅ Vite React plugin found"
+echo "👉 Checking Vite config for React plugin..."
+VITE_CONFIG_FILE=""
+if [ -f vite.config.jsx ]; then VITE_CONFIG_FILE=vite.config.jsx; fi
+if [ -z "$VITE_CONFIG_FILE" ] && [ -f vite.config.js ]; then VITE_CONFIG_FILE=vite.config.js; fi
+if [ -n "$VITE_CONFIG_FILE" ] && grep -q "@vitejs/plugin-react" "$VITE_CONFIG_FILE" 2>/dev/null; then
+  echo "✅ React plugin found in $VITE_CONFIG_FILE"
 else
-  echo "⚠️  React plugin not found in vite.config.js – add:"
-  echo 'import react from "@vitejs/plugin-react";'
-  echo 'plugins: [react()]'
+  echo "⚠️  React plugin not detected – ensure Vite config includes:";
+  echo '   import react from "@vitejs/plugin-react";'
+  echo '   export default defineConfig({ plugins: [react()] })'
 fi
 
 # 3. Check PostCSS config (Tailwind v4 expects @tailwindcss/postcss)
@@ -52,4 +55,3 @@ else
 fi
 
 echo "🎉 All sanity checks passed!"
-
