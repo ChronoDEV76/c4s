@@ -1,12 +1,34 @@
-# React + Vite
+# C4S (Chrono4Solutions) — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Production‑ready React app scaffolded with Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Quickstart
+- Install deps (pnpm recommended): `pnpm install`
+- Dev server: `pnpm dev` → http://localhost:5173
+- Lint: `pnpm lint` — ESLint for `.js/.jsx`
+- Format: `pnpm fmt` — Prettier write
+- Build: `pnpm build` → output in `dist/`
+- Preview built app: `pnpm preview`
+- Sanity checks: `pnpm check` — env/config + build smoke test
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+- `src/main.jsx` — app entry
+- `src/App.jsx` — root component
+- `src/components/` — shared UI
+- `src/pages/` — routed pages
+- `public/` — static assets
 
-## Expanding the ESLint configuration
+## Testing
+- Framework: Vitest + Testing Library (sample in `src/components/__tests__/`)
+- Commands: `pnpm test`, `pnpm test:watch`, `pnpm coverage`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contributing
+- Commit style: Conventional Commits enforced via Commitlint
+- Hooks: pre‑commit runs `pnpm lint`; commit message validated
+- PRs: template and automated checks included
+- See detailed guidelines in `AGENTS.md`
+
+## Tooling
+- Vite + `@vitejs/plugin-react`
+- Tailwind CSS v4 (`@tailwindcss/postcss`)
+- ESLint (React Hooks/Refresh) + Prettier
