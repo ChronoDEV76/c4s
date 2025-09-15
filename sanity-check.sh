@@ -6,13 +6,19 @@ echo "🔍 Running sanity checks for React + Vite + Tailwind project..."
 # 1. Check Node & package manager
 echo "👉 Checking Node.js and package manager..."
 node -v || { echo "❌ Node.js is not installed"; exit 1; }
-if command -v pnpm &> /dev/null; then
-  echo "✅ pnpm detected: $(pnpm -v)"
-elif command -v npm &> /dev/null; then
-  echo "✅ npm detected: $(npm -v)"
-else
-  echo "❌ No npm/pnpm found. Please install one."; exit 1;
+
+# Choose package manager based on lockfile (fallback to available binary)
+PKG_MGR=""
+if [ -f pnpm-lock.yaml ]; then
+  PKG_MGR=pnpm
+elif [ -f package-lock.json ]; then
+  PKG_MGR=npm
 fi
+if [ -z "$PKG_MGR" ]; then
+  if command -v pnpm &> /dev/null; then PKG_MGR=pnpm; elif command -v npm &> /dev/null; then PKG_MGR=npm; fi
+fi
+[ -z "$PKG_MGR" ] && { echo "❌ No npm/pnpm found. Please install one."; exit 1; }
+if [ "$PKG_MGR" = "pnpm" ]; then echo "✅ Using pnpm: $(pnpm -v)"; else echo "✅ Using npm: $(npm -v)"; fi
 
 # 2. Check vite.config.js for React plugin
 echo "👉 Checking Vite config for React plugin..."
@@ -48,10 +54,12 @@ fi
 
 # 5. Run build test
 echo "👉 Running Vite build..."
-if pnpm -v &> /dev/null; then
-  pnpm run build || { echo "❌ Vite build failed"; exit 1; }
-else
-  npm run build || { echo "❌ Vite build failed"; exit 1; }
+
+if [ ! -d node_modules ]; then
+  echo "⚠️  node_modules is missing. Run '$PKG_MGR install' and retry."
+  exit 1
 fi
+
+$PKG_MGR run build || { echo "❌ Vite build failed"; exit 1; }
 
 echo "🎉 All sanity checks passed!"
