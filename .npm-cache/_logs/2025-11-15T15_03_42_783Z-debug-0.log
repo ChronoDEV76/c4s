@@ -1,0 +1,18 @@
+0 verbose cli /home/roger/.nvm/versions/node/v22.18.0/bin/node /home/roger/.nvm/versions/node/v22.18.0/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.18.0
+3 silly config load:file:/home/roger/.nvm/versions/node/v22.18.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/roger/Desktop/WEBSITE/C4S/React_Vite  C4S/c4s/b12-to-vercel/.npmrc
+5 silly config load:file:/home/roger/.npmrc
+6 silly config load:file:/home/roger/.nvm/versions/node/v22.18.0/etc/npmrc
+7 verbose title npm run lint
+8 verbose argv "run" "lint"
+9 verbose logfile logs-max:10 dir:/home/roger/Desktop/WEBSITE/C4S/React_Vite  C4S/c4s/b12-to-vercel/.npm-cache/_logs/2025-11-15T15_03_42_783Z-
+10 verbose logfile /home/roger/Desktop/WEBSITE/C4S/React_Vite  C4S/c4s/b12-to-vercel/.npm-cache/_logs/2025-11-15T15_03_42_783Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose cwd /home/roger/Desktop/WEBSITE/C4S/React_Vite  C4S/c4s/b12-to-vercel
+13 verbose os Linux 6.8.0-48-generic
+14 verbose node v22.18.0
+15 verbose npm  v10.9.3
+16 verbose exit 0
+17 info ok

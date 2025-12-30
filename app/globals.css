@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind v4: declare files to scan for classes */
+@source "./app/**/*.{js,ts,jsx,tsx,mdx}";
+@source "./components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "./content/**/*.{js,ts,jsx,tsx,mdx}";
+
+:root {
+  color-scheme: dark;
+  background-color: #05060b;
+
+  --brand-charcoal: #05060b;
+  --brand-slate: #11131c;
+  --brand-gold: #cfa663;
+  --brand-accent: #5b8dff;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans, system-ui, sans-serif);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--brand-charcoal);
+    color: rgb(229 231 235);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Keep global background subtle; hero will override locally */
+  main {
+    position: relative;
+    isolation: isolate;
+  }
+
+  main::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(207, 166, 99, 0.18), transparent 45%),
+      radial-gradient(circle at 80% 5%, rgba(91, 141, 255, 0.18), transparent 40%),
+      linear-gradient(160deg, #070a13 0%, #0b1120 55%, #05060b 100%);
+  }
+
+  main::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(120deg, rgba(5, 6, 11, 0.65), rgba(8, 10, 20, 0.55));
+  }
+
+  /* Let the hero image show through on the home page. */
+  main.home-hero::before,
+  main.home-hero::after {
+    content: none;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 24px 90px rgba(0, 0, 0, 0.55);
+  }
+
+  .section-padding {
+    padding-block: 4rem;
+  }
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-block: 5.5rem;
+    }
+  }
+
+  .section-shell {
+    background:
+      radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 55%),
+      rgba(8, 11, 20, 0.78);
+  }
+
+  /* C4S hero background */
+  .hero-bg-chrono {
+    position: relative;
+    background-image:
+      linear-gradient(to bottom, rgba(5, 7, 15, 0.88), rgba(5, 7, 15, 0.58), rgba(5, 7, 15, 0.92)),
+      url("/images/c4s-hero-bg.png");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+
+  .hero-landing {
+    --hero-pos: center right;
+    --hero-size: cover;
+  }
+  @media (max-width: 640px) {
+    .hero-landing {
+      --hero-pos: right 75%;
+      --hero-size: 150% auto;
+    }
+  }
+}
