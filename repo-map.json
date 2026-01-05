@@ -1,32 +1,34 @@
 {
-  "generatedAt": "2025-12-23T09:26:11.268Z",
+  "generatedAt": "2026-01-05T11:29:33.682Z",
   "root": "b12-to-vercel",
   "rootPath": "/home/roger/Desktop/WEBSITE/C4S/React_Vite  C4S/b12-to-vercel",
   "includeSizes": true,
   "maxDepth": "∞",
   "stats": {
-    "files": 53,
-    "dirs": 16,
-    "bytes": 368634,
-    "humanBytes": "360.0 KB"
+    "files": 32,
+    "dirs": 9,
+    "bytes": 2084565,
+    "humanBytes": "2.0 MB"
   },
   "extStats": {
-    ".tsx": 17,
     ".log": 10,
-    ".ts": 9,
-    ".mjs": 4,
-    ".md": 3,
-    ".js": 3,
-    ".json": 3,
+    ".json": 4,
+    ".tsx": 3,
+    ".mjs": 3,
+    ".ts": 3,
     "<no-ext>": 2,
+    ".md": 2,
     ".ico": 1,
-    ".css": 1
+    ".css": 1,
+    ".js": 1,
+    ".png": 1,
+    ".txt": 1
   },
   "tree": {
     "type": "dir",
     "name": "b12-to-vercel",
     "path": ".",
-    "size": 368634,
+    "size": 2084565,
     "children": [
       {
         "type": "dir",
@@ -121,75 +123,19 @@
         "type": "dir",
         "name": "app",
         "path": "app",
-        "size": 42368,
+        "size": 32104,
         "children": [
           {
             "type": "dir",
-            "name": "brandwacht-huren",
-            "path": "app/brandwacht-huren",
-            "size": 879,
+            "name": "components",
+            "path": "app/components",
+            "size": 2012,
             "children": [
               {
                 "type": "file",
-                "name": "page.tsx",
-                "path": "app/brandwacht-huren/page.tsx",
-                "size": 879
-              }
-            ]
-          },
-          {
-            "type": "dir",
-            "name": "diensten",
-            "path": "app/diensten",
-            "size": 9206,
-            "children": [
-              {
-                "type": "file",
-                "name": "page.tsx",
-                "path": "app/diensten/page.tsx",
-                "size": 9206
-              }
-            ]
-          },
-          {
-            "type": "dir",
-            "name": "facility-management",
-            "path": "app/facility-management",
-            "size": 857,
-            "children": [
-              {
-                "type": "file",
-                "name": "page.tsx",
-                "path": "app/facility-management/page.tsx",
-                "size": 857
-              }
-            ]
-          },
-          {
-            "type": "dir",
-            "name": "secure-iot-solar-gateway",
-            "path": "app/secure-iot-solar-gateway",
-            "size": 845,
-            "children": [
-              {
-                "type": "file",
-                "name": "page.tsx",
-                "path": "app/secure-iot-solar-gateway/page.tsx",
-                "size": 845
-              }
-            ]
-          },
-          {
-            "type": "dir",
-            "name": "testimonials",
-            "path": "app/testimonials",
-            "size": 1088,
-            "children": [
-              {
-                "type": "file",
-                "name": "page.tsx",
-                "path": "app/testimonials/page.tsx",
-                "size": 1088
+                "name": "ContactOverlay.tsx",
+                "path": "app/components/ContactOverlay.tsx",
+                "size": 2012
               }
             ]
           },
@@ -203,192 +149,55 @@
             "type": "file",
             "name": "globals.css",
             "path": "app/globals.css",
-            "size": 2281
+            "size": 2529
           },
           {
             "type": "file",
             "name": "layout.tsx",
             "path": "app/layout.tsx",
-            "size": 1015
+            "size": 507
           },
           {
             "type": "file",
             "name": "page.tsx",
             "path": "app/page.tsx",
-            "size": 266
+            "size": 1125
           }
         ]
       },
       {
         "type": "dir",
-        "name": "components",
-        "path": "components",
-        "size": 20423,
+        "name": "public",
+        "path": "public",
+        "size": 1760443,
         "children": [
           {
             "type": "dir",
-            "name": "layout",
-            "path": "components/layout",
-            "size": 10885,
+            "name": "images",
+            "path": "public/images",
+            "size": 1760443,
             "children": [
               {
                 "type": "file",
-                "name": "footer.tsx",
-                "path": "components/layout/footer.tsx",
-                "size": 2401
-              },
-              {
-                "type": "file",
-                "name": "header.tsx",
-                "path": "components/layout/header.tsx",
-                "size": 3009
-              },
-              {
-                "type": "file",
-                "name": "site-footer.tsx",
-                "path": "components/layout/site-footer.tsx",
-                "size": 3141
-              },
-              {
-                "type": "file",
-                "name": "site-header.tsx",
-                "path": "components/layout/site-header.tsx",
-                "size": 2334
-              }
-            ]
-          },
-          {
-            "type": "dir",
-            "name": "sections",
-            "path": "components/sections",
-            "size": 9538,
-            "children": [
-              {
-                "type": "file",
-                "name": "cta-panel.tsx",
-                "path": "components/sections/cta-panel.tsx",
-                "size": 1296
-              },
-              {
-                "type": "file",
-                "name": "features-grid.tsx",
-                "path": "components/sections/features-grid.tsx",
-                "size": 1648
-              },
-              {
-                "type": "file",
-                "name": "hero-section.tsx",
-                "path": "components/sections/hero-section.tsx",
-                "size": 3468
-              },
-              {
-                "type": "file",
-                "name": "testimonial-highlight.tsx",
-                "path": "components/sections/testimonial-highlight.tsx",
-                "size": 927
-              },
-              {
-                "type": "file",
-                "name": "testimonial-list.tsx",
-                "path": "components/sections/testimonial-list.tsx",
-                "size": 1220
-              },
-              {
-                "type": "file",
-                "name": "value-points.tsx",
-                "path": "components/sections/value-points.tsx",
-                "size": 979
+                "name": "c4s-hero-bg.png",
+                "path": "public/images/c4s-hero-bg.png",
+                "size": 1760443
               }
             ]
           }
         ]
-      },
-      {
-        "type": "dir",
-        "name": "content",
-        "path": "content",
-        "size": 17393,
-        "children": [
-          {
-            "type": "file",
-            "name": "brandwacht.ts",
-            "path": "content/brandwacht.ts",
-            "size": 2441
-          },
-          {
-            "type": "file",
-            "name": "diensten.md",
-            "path": "content/diensten.md",
-            "size": 2701
-          },
-          {
-            "type": "file",
-            "name": "facility.ts",
-            "path": "content/facility.ts",
-            "size": 2519
-          },
-          {
-            "type": "file",
-            "name": "home.md",
-            "path": "content/home.md",
-            "size": 1194
-          },
-          {
-            "type": "file",
-            "name": "home.ts",
-            "path": "content/home.ts",
-            "size": 4609
-          },
-          {
-            "type": "file",
-            "name": "navigation.ts",
-            "path": "content/navigation.ts",
-            "size": 539
-          },
-          {
-            "type": "file",
-            "name": "secure-iot.ts",
-            "path": "content/secure-iot.ts",
-            "size": 2357
-          },
-          {
-            "type": "file",
-            "name": "testimonials.ts",
-            "path": "content/testimonials.ts",
-            "size": 1033
-          }
-        ]
-      },
-      {
-        "type": "dir",
-        "name": "lib",
-        "path": "lib",
-        "size": 0,
-        "children": []
       },
       {
         "type": "dir",
         "name": "scripts",
         "path": "scripts",
-        "size": 11667,
+        "size": 6816,
         "children": [
-          {
-            "type": "file",
-            "name": "build-globals-from-b12.js",
-            "path": "scripts/build-globals-from-b12.js",
-            "size": 1593
-          },
           {
             "type": "file",
             "name": "repo-map.mjs",
             "path": "scripts/repo-map.mjs",
             "size": 6816
-          },
-          {
-            "type": "file",
-            "name": "sanity-check-b12.js",
-            "path": "scripts/sanity-check-b12.js",
-            "size": 3258
           }
         ]
       },
@@ -396,7 +205,7 @@
         "type": "file",
         "name": ".gitignore",
         "path": ".gitignore",
-        "size": 480
+        "size": 500
       },
       {
         "type": "file",
@@ -426,13 +235,13 @@
         "type": "file",
         "name": "package-lock.json",
         "path": "package-lock.json",
-        "size": 247953
+        "size": 247981
       },
       {
         "type": "file",
         "name": "package.json",
         "path": "package.json",
-        "size": 602
+        "size": 603
       },
       {
         "type": "file",
@@ -448,15 +257,27 @@
       },
       {
         "type": "file",
-        "name": "tailwind.config.ts",
-        "path": "tailwind.config.ts",
-        "size": 931
+        "name": "repo-map.json",
+        "path": "repo-map.json",
+        "size": 12626
       },
       {
         "type": "file",
-        "name": "toneCheck.mjs",
-        "path": "toneCheck.mjs",
-        "size": 7916
+        "name": "repo-map.md",
+        "path": "repo-map.md",
+        "size": 1843
+      },
+      {
+        "type": "file",
+        "name": "repo-map.tree.txt",
+        "path": "repo-map.tree.txt",
+        "size": 1817
+      },
+      {
+        "type": "file",
+        "name": "tailwind.config.ts",
+        "path": "tailwind.config.ts",
+        "size": 931
       },
       {
         "type": "file",
