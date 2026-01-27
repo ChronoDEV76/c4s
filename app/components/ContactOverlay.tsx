@@ -9,7 +9,7 @@ export default function ContactOverlay() {
       </h2>
       <p className="mt-3 text-xs text-slate-200/80 sm:text-sm">
         Chrono4Solutions wordt ingeschakeld wanneer tijd, risico en
-        verantwoordelijkheid samenkomen — en standaardmodellen tekortschieten
+        verantwoordelijkheid samenkomen
       </p>
 
       <div className="mt-5 overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-[0_18px_50px_rgba(0,0,0,0.45)]">

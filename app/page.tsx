@@ -24,7 +24,7 @@ export default function Page() {
         </div>
 
         <div className="relative z-10 flex min-h-[100dvh] w-full">
-          <aside className="mx-auto flex w-full max-w-sm flex-col items-center justify-center px-4 py-16 -translate-y-10 sm:-translate-y-24 sm:mx-0 sm:max-w-[360px] sm:items-start sm:px-12">
+          <aside className="mx-auto flex w-full max-w-sm flex-col items-center justify-center px-4 py-16 -translate-y-10 sm:-translate-x-6 sm:-translate-y-32 sm:mx-0 sm:max-w-[360px] sm:items-start sm:px-8">
             <div className="mb-6 text-center sm:hidden">
               <h1 className="font-display text-3xl font-black tracking-tight text-white/95">
                 <span className="text-white">Chrono</span>
